@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+ <html>
+    <%- include('./partials/head.ejs')%>
+    <body>
+        <%- include('./partials/nav.ejs')%>
+        <h2>We will need your registration details to be added to the note taking experience
+        </h2>
+        <form action="register.php">
+        <ul>
+           <li> <label >
+            
+            username
+            <input type="text" size="20px" id="username">
+        </label></li>    
+        <li><label >
+            E-mail
+        <input type="email" size="30px" id="email">
+        </label></li>
+        <li><label id="dob">
+            Date of birth
+         <input type="date" size="15px" id="email">
+        </label></li>
+        <li><label >
+            password
+            <input type="password" size="15px" id="password">
+        </label></li>
+        </ul>
+    </form>
+         <button id="finish">
+            FINISH
+         </button>
+         <%- include('./partials/footer.ejs')%>
+    </body> 
+</html>

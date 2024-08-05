@@ -1,0 +1,25 @@
+<html>
+    <%- include('./partials/head.ejs')%>
+    <body>
+        <%- include('./partials/nav.ejs')%>
+  <h2>New note</h2>
+  <div class="create content">
+  <form action="/NOTES" method="POST">
+    
+    <label>
+  
+        Note header    
+         <textarea id="header" name="header" required></textarea>
+   </label>
+   
+         <label id="note">
+        Note content
+        <textarea id="content" name="content" required></textarea>
+        </label>
+      
+        <button type="submit">Create</button>
+        </form>
+        </div>
+        <%- include('./partials/footer.ejs')%>
+  </body>
+</html>  

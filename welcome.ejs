@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+  <html>
+    <%- include('./partials/head.ejs')%>
+        
+    <body>
+      <%- include('./partials/nav.ejs')%>
+      <nav>
+        <div class="site-title" id="profile">
+     <img src="emoji.png">
+            Profile
+            <a href="profile.html"></a>
+    </div>
+    
+      <div class="site-settings">
+        <a href="/">NOOTE</a>
+        <a href="/">New account</a>
+        <a href="/log in">Log out</a>
+        <a href="/about">About us</a>
+      </div>
+      <h2 id="welcome"
+      onclick="cedrick()">Welcome to NOOTE</h2>
+      <button type="submit" id="sign">
+    
+        <a href="sign up.html">
+       Sign up
+          </a>
+          </button>
+          <button type="submit" id="log">
+           
+            <a href="log in.html">
+             Log in
+            </a>
+          </button>
+          <%- include('./partials/footer.ejs')%>
+    </body>
+  </html>  
