@@ -1,10 +1,10 @@
 {
-  "name": "music",
+  "name": "noote",
   "version": "1.0.0",
   "main": "ced.js",
   "scripts": {
-    "test": "start",
-    "start": "nodemon app.js"
+    "test": "app.test",
+    "start": "app.start"
   },
   "author": "cedrique",
   "license": "ISC",
