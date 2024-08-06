@@ -1,1 +1,27 @@
-
+{
+  "name": "noote",
+  "version": "1.0.0",
+  "main": "ced.js",
+  "scripts": {
+    "test": "node apptest.js",
+    "start": " appstart.js",
+  },
+  "author": "cedrique",
+  "license": "ISC",
+  "description": "",
+  "dependencies": {
+    "cors": "^2.8.5",
+    "ejs": "^3.1.10",
+    "express": "^4.19.2",
+    "lodash": "^4.17.21",
+    "mongoose": "^8.5.2",
+    "morgan": "^1.10.0",
+    "mssql": "^11.0.1",
+    "supertest": "^7.0.0"
+  },
+  "devDependencies": {
+    "chai": "^5.1.1",
+    "jest": "^29.7.0",
+    "mocha": "^10.7.0"
+  }
+}
