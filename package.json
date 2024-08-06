@@ -4,7 +4,7 @@
   "main": "ced.js",
   "scripts": {
     "test": "node apptest.js",
-    "start": " appstart.js",
+    "start": " appstart.js"
   },
   "author": "cedrique",
   "license": "ISC",
