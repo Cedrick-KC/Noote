@@ -76,9 +76,7 @@ app.get('/single-note',(req,res) => {
 
 app.use(express.static('views'));
 app.use(express.urlencoded({extended: true}));
-app.get('/',(req,res)=>{
-  //res.send('<p>hi bro</p>');
-  res.render('index', { title: 'new account'});
+
 });
 app.get('/note/create',(req,res)=>{
   res.render('create',{ title: 'create'});
