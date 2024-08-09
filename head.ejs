@@ -1,0 +1,139 @@
+<head>
+    <title> <%= title %> </title>
+    <meta charset="UTF-8">
+    <style>
+        body{
+    background:;
+    font-size: 2em;
+    font-color:blue;
+    margin: 20%;
+  background-color:rgba(39, 39, 39, 0.973) ; /* Dark background */
+  background-image: radial-gradient(#fff 10%, transparent 11%), radial-gradient(#fff 10%, transparent 11%);
+  background-size: 22px 22px; /* Adjust the size of the dots */
+  background-position: 0 0, 10px 10px; /* Position the dots */
+  background-repeat: repeat; /* Repeat the pattern */
+}
+img{
+    width:50px;
+    height: 50px;
+    border-radius: 50%;
+}
+.details{
+    position: relative;
+}
+.delete{
+position: absolute;
+top:0;
+right: 0;
+border-radius: 50%;
+padding:8px;
+cursor:pointer;
+    box-shadow:  1px 2px 3px rgb(75, 6, 6);
+
+}
+.delete.hover{
+    cursor:pointer;
+    box-shadow:  1px 2px 3px rgb(75, 6, 6);
+}
+.notes a{
+    display:block;
+    margin: 40px;
+    padding-left: 30px;
+    border-left: 6px solid burlywood;
+    color:burlywood;
+}
+.notes a:hover h2{
+    color:burlywood
+}
+#username{
+    color: rgb(116, 110, 110);
+    vertical-align: middle;
+}
+#password{
+    color: rgb(116, 110, 110);
+    vertical-align: middle;
+}
+button{
+    background-color: grey;
+    align-content: end;
+    padding: 25px;
+}
+
+    
+    form{
+        align-items: center;
+    }
+    h2,h3,h4,p,ul{
+        text-align:top;
+    }
+   
+    #email{
+        color:rgb(116, 110, 110);
+        align:vertical;
+    }
+    #dob{
+        
+        align-items: center;
+    }
+    
+   
+    
+    #profile{
+        
+        background-color: darkolivegreen;
+        font-size:large;
+        padding-bottom: 20px;
+    }
+   nav ul{
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-end;
+   }
+   nav li{
+    list-style-type: none;
+    margin-left: 20px;
+   }
+   nav h1{
+    font-size: 3em;
+   }
+    
+    footer{
+        background-color: darkslategrey;
+        font-size: smaller;
+        font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+        font-weight: lighter;
+    }
+    .content{
+        margin-left: 20px;
+    }
+    .create-note form{
+        max-width: 400px;
+    }
+    #header{
+        font-weight: 400;
+        width: 300px;
+        
+        margin: auto;
+        max-height: 80px;
+    }
+    textarea{
+        height: 120px;
+    }
+    .create-note button{
+        margin-top: 20px;
+        padding: 6px;
+        border: 0;
+        font-size: 1.2em;
+        cursor: pointer;
+    }
+    #note{
+        display: block;
+        width: 300px;
+        
+        max-height: fit-content;
+        padding: 8px;
+        margin:10%;
+       
+    }
+    </style>
+</head>
