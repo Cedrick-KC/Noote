@@ -6,9 +6,10 @@ const bcrypt = require ('bcryptjs');
 const session = require('express-session');
 const MongoStore = require ('connect-mongo');
 const cookieparser = require('cookie-parser');
-const Note = require('/noote');
-const User = require('/user');
-const authRoutes = require ('/authroutes');
+const Note = require('./models/noote');
+const User = require('./usermodel/user.js');
+const authRoutes = require ('./Routes/authroutes');
+const jwt = require ('jsonwebtoken');
 
 
 
@@ -20,6 +21,12 @@ app.use(cookieparser());
 app.use(bodyParser.urlencoded({ extended: true }));
 app.use(express.urlencoded({ extended: true }));
 app.use(authRoutes);
+const maxAge = 3 * 24 * 60 * 60;
+const createToken = (id) => {
+return jwt.sign({id},'cedmade secret',{
+    expiresIn: maxAge
+});
+}
 
 //const dbURI = 'mongodb+srv://cedrique:20066Cedrick.@noote.nimmrmn.mongodb.net/?retryWrites=true&w=majority&appName=noote'
 mongoose.connect("mongodb+srv://cedrique:20066Cedrick.@noote.nimmrmn.mongodb.net/test")
@@ -88,24 +95,25 @@ res.render('log',{ title: 'log in'});
 });
 //log in sessions
 
-//app.post('/log', async (req, res) => {
-   // try {
-       // const { username, password } = req.body;
-       // const user = await User.findOne({ username });
+app.post('/log', async (req, res) => {
+   try {
+        const { username, password } = req.body;
+        const user = await User.findOne({ username,password });
 
-       // if (user && await bcrypt.compare(password, user.password)) {
-        //    req.session.userId = user._id;
-        //    res.redirect('/NOTES');
-       //} else {
-       //     res.send('Invalid username or password');
-      //  }
-    //} catch (err) {
-       // console.error(err);
-       // res.status(500).send('Internal Server Error');
-    //}
-//});
- // const errorMessage = `Illegal arguments: ${typeof s}, ${typeof salt}`;
-//process.nextTick(callback.bind(this, new Error(errorMessage)));
+        if (user ) {
+            req.session.userId = user._id;
+            const token = createToken(user._id);
+            res.cookie('jwt',token, { httpOnly: true, maxAge: maxAge * 1000 });
+      res.status(200).json({user: user._id}),
+            res.redirect('/NOTES');
+       } else {
+            res.send('Invalid username or password');
+        }
+    } catch (err) {
+        console.error(err);
+        res.status(500).send('Internal Server Error');
+    }
+});
   //about route
 
 app.get('/about',(req,res)=> {
