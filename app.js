@@ -2,13 +2,13 @@
 const express = require ('express');
 const mongoose = require( 'mongoose');
 const bodyParser = require('body-parser');
-const bcrypt = require ('bcryptjs');
+//const bcrypt = require ('bcryptjs');
 const session = require('express-session');
 const MongoStore = require ('connect-mongo');
 const cookieparser = require('cookie-parser');
-const Note = require('./models/noote');
-const User = require('./usermodel/user.js');
-const authRoutes = require ('./Routes/authroutes');
+const Note = require('/noote');
+const User = require('/user.js');
+const authRoutes = require ('/authroutes');
 const jwt = require ('jsonwebtoken');
 
 
