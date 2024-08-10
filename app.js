@@ -6,9 +6,9 @@ const bcrypt = require ('bcryptjs');
 const session = require('express-session');
 const MongoStore = require ('connect-mongo');
 const cookieparser = require('cookie-parser');
-const Note = require('./models/noote');
-const User = require('./usermodel/user.js');
-const authRoutes = require ('./Routes/authroutes');
+const Note = require('/noote');
+const User = require('/user');
+const authRoutes = require ('/authroutes');
 
 
 
