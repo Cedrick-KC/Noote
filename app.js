@@ -11,28 +11,7 @@ const app = express();
  
 //const dbURI = 'mongodb+srv://cedrique:20066Cedrick.@noote.nimmrmn.mongodb.net/?retryWrites=true&w=majority&appName=noote'
 mongoose.connect("mongodb+srv://cedrique:20066Cedrick.@noote.nimmrmn.mongodb.net/test")
- const userSchema = new mongoose.Schema({
- name:String,
-  dob:Number,
-  password:String,
-  email:String
- })
-const userModel = mongoose.model("emp", userSchema);
-//const emp1 = new userModel({
- // name:"cedrick codes",
-  //age:23
-  //})
-//emp1.save();
-const noteSchema = new mongoose.Schema({
-  header:String,
-  content:String
-})
-const noteModel = mongoose.model("note",noteSchema);
-  //const note1 = new noteModel({
-   //header:"the long journey",
-   //content:"when I started coding I was a failure"
-  //})
-  //note1.save();
+
 
 //{ useNewUrlParser: true, useUnifiedTopology: true})
        //.then((result) =>  console.log('connected'))
@@ -56,28 +35,11 @@ app.get('/single-note',(req,res) => {
   console.log('listening');
  })
 
-//app.use(morgan('dev'));
-
-//app.get('/add-note',(req,res) =>{
-//const note = new Note({
- //header: 'cedrick test',
-  //content: 'i code bro',
-//})
-//Note.save()
-  //.then((result) => {
-   // res.send(result)
-  //}
-//)
-  //.catch((err) =>{
-  //  console.log('error');
- // }
-//)
-//})
 
 app.use(express.static('views'));
 app.use(express.urlencoded({extended: true}));
 
-});
+
 app.get('/note/create',(req,res)=>{
   res.render('create',{ title: 'create'});
 }
@@ -87,16 +49,7 @@ app.get('/',(req,res)=> {
  res.render('welcome', { title: 'welcome'});
 });
 
-//app.post('/NOTES',(req,res) => {
-//const user = new user(req.body)
-//user.save()
- // .then((result) => {
-   // res.redirect('/NOTES');
- // )
- // .catch((err) =>{
-  //  console.log(err)
- // })
-//})
+
 
 app.get('/home',(req,res)=> {
   res.redirect('/NOTES')
