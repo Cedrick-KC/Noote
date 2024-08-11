@@ -1,3 +1,4 @@
+export const authController = {
 const User = require('user');
 const jwt =  require('jsonwebtoken');
 
@@ -44,4 +45,5 @@ try {
 catch (err) {
 
 }}
+};
 export default authController;
