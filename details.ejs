@@ -1,10 +1,10 @@
 
   <html>
     
-  <%- include('./partials/head.ejs')%>
+  <%- include('head.ejs')%>
     <body>
      
-    <%- include('./partials/nav.ejs')%>
+    <%- include('nav.ejs')%>
     <div class="details content">
       <h1> <%= note.header %></h1>
       
@@ -14,7 +14,7 @@
         </div>
         <a class="delete"  data.doc="<%= note._id %>">Delete</a>
     </div>
-        <%- include('./partials/footer.ejs')%>
+        <%- include('footer.ejs')%>
           <script>
 const trashcan = document.querySelector('a.delete');
 
