@@ -3,8 +3,8 @@
   "version": "1.0.0",
   "main": "ced.js",
   "scripts": {
-    "test": "node apptest.js",
-    "start": " appstart.js"
+   // "test": "node apptest.js",
+   // "start": " appstart.js"
   },
   "author": "cedrique",
   "license": "ISC",
