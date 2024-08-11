@@ -6,9 +6,9 @@ const bodyParser = require('body-parser');
 const session = require('express-session');
 const MongoStore = require ('connect-mongo');
 const cookieparser = require('cookie-parser');
-const Note = require('/noote');
-const User = require('/user.js');
-const authRoutes = require ('/authroutes');
+const Note = require('noote');
+const User = require('user.js');
+const authRoutes = require ('authroutes');
 const jwt = require ('jsonwebtoken');
 
 
@@ -91,7 +91,7 @@ app.get('/profile',(req,res) => {
     });
 
 app.get('/log',(req,res)=> {
-res.render('log',{ title: 'log in'});
+res.render('log',{ title: 'login' });
 });
 //log in sessions
 
