@@ -59,3 +59,4 @@ userSchema.pre ('save', async function (next) {
 
 
 module.exports = User;
+export default user;
