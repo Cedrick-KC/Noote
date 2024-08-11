@@ -1,7 +1,8 @@
 {
   "name": "noote",
   "version": "1.0.0",
-  "main": "ced.js",
+  "main": "app.js",
+  "type": "module",
   "scripts": {
     "test": "node apptest.js",
    "start": " appstart.js"
