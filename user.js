@@ -1,3 +1,4 @@
+export const user = {
 const { lowerCase } = require('lodash');
 const express = require ('express');
 const mongoose = require ('mongoose');
@@ -53,6 +54,7 @@ userSchema.pre ('save', async function (next) {
         throw Error('Incorrect Username')
 
     }
+};
 
    
 
