@@ -1,8 +1,8 @@
 <!DOCTYPE html>
   <html>
-    <%- include('./partials/head.ejs')%>
+    <%- include('head.ejs')%>
     <body>
-      <%- include('./partials/nav.ejs')%>
+      <%- include('nav.ejs')%>
       <h2>If you have an account you can log in</h2>
       <form action="/log" method="POST">
         <label>
@@ -15,7 +15,7 @@
             </label>
             <button type="submit">Log in</button>
             </form>
-            <%- include('./partials/footer.ejs')%>
+            <%- include('footer.ejs')%>
             <!--
             <script>
               const form  = document.querySelector('form')
