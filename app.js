@@ -6,9 +6,9 @@ const bodyParser = require('body-parser');
 const session = require('express-session');
 const MongoStore = require ('connect-mongo');
 const cookieparser = require('cookie-parser');
-const Note = require('noote');
+const Note = require('noote.js');
 const User = require('user.js');
-const authRoutes = require ('authroutes');
+const authRoutes = require ('authroutes.js');
 const jwt = require ('jsonwebtoken');
 
 
