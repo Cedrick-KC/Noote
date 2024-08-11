@@ -44,3 +44,4 @@ try {
 catch (err) {
 
 }}
+export default authController;
